@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
 
-router.use('/story', require('./story'));
+router.use('/', require('./activity'));
 
 module.exports = router;
