@@ -10,4 +10,6 @@ module.exports = {
     ALREADY_NICKNAME: "닉네임 중복",
     ABLE_NICKNAME: "사용가능한 닉네임",
     UNAUTHORIZED: "권한이 없는 유저입니다.",
+    DB_ERROR : "서버 연동 실패.",
+    BOARD_SUCCESS : "게시판 전체 조회 성공",
 };
