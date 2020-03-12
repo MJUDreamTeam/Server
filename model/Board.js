@@ -1,17 +1,12 @@
-var express = require('express');
-var router = express.Router();
-const utils = require('../../module/utils/utils');
-const resMessage = require('../../module/utils/responseMessage');
-const statusCode = require('../../module/utils/statusCode');
-const pool = require('../../module/pool');
-const authUtils = require('../../module/utils/authUtils');
-const upload = require('../../config/multer');
-const moment = require('moment');
+const utils = require('../module/utils/utils');
+const resMessage = require('../module/utils/responseMessage');
+const statusCode = require('../module/utils/statusCode');
+const pool = require('../module/pool');
 
 Board = {
-    getAllBoard: (userIdx) => {
+    getAllBoard : (userIdx) => {
         return new Promise(async (resolve,reject)=>{
-            const getMyFollower = `SELECT B.followToIdx FROM Follow B WHERE followFromIdx = '${userIdx}';`
+            const getMyFollower = `SELECT B.followToIdx FROM Follow B WHERE followFromIdx = ${userIdx}`
             const getAllBoard =  `SELECT * FROM Board WHERE writerIdx IN (${getMyFollower});`;
             const getAllBoardResult = await pool.queryParam_None(getAllBoard);
 
@@ -33,3 +28,5 @@ Board = {
         });
     },
 }
+
+module.exports = Board;

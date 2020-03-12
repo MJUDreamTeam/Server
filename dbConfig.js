@@ -5,7 +5,7 @@ const dbConfig = {
     port: 3306,
     user: 'seokki',
     password: 'seokkiserver',
-    database: 'Seokki',
+    database: 'CloneInsta',
     dateStrings: 'date'
 }
 

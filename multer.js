@@ -1,4 +1,4 @@
-const multer = require('config/multer');
+const multer = require('multer');
 const multerS3 = require('multer-s3');
 const aws = require('aws-sdk');
 aws.config.loadFromPath(__dirname + '/awsconfig.json'); //제이슨 참조

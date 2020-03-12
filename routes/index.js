@@ -7,5 +7,6 @@ router.use('/search', require('./search'));
 router.use('/story', require('./story'));
 router.use('/activity', require('./activity'));
 router.use('/follow', require('./follow'));
+router.use('/board', require('./board'));
 
 module.exports = router;
